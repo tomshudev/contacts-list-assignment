@@ -1,5 +1,6 @@
 $contact-card-height: 30rem;
 $hidden-information-height: 5rem;
+$hovered-card-height: $contact-card-height + $hidden-information-height;
 
 .contact {
   padding: 2rem;
@@ -48,7 +49,7 @@ $hidden-information-height: 5rem;
   }
 
   &:hover {
-    height: calc($contact-card-height + $hidden-information-height);
+    height: $hovered-card-height;
   }
 
   &:hover > .hidden-info {
