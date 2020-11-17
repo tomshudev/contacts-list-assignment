@@ -1,8 +1,25 @@
 .contacts-list {
-  padding: 3rem;
+  min-height: 100vh;
   background-color: #eee;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2rem;
+  .contacts {
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-gap: 2rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 60rem) {
+    .contacts {
+      grid-template-columns: repeat(auto-fit, 20rem);
+    }
+  }
+
+  @media (max-width: 50rem) {
+    .contacts {
+      grid-template-columns: repeat(auto-fit, 35rem);
+    }
+  }
 }

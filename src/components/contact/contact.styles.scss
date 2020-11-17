@@ -1,3 +1,6 @@
+$contact-card-height: 30rem;
+$hidden-information-height: 5rem;
+
 .contact {
   padding: 2rem;
   display: flex;
@@ -5,10 +8,10 @@
   text-align: left;
   position: relative;
 
-  height: 30rem;
+  height: $contact-card-height;
 
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
   .image {
     width: 100%;
@@ -45,7 +48,7 @@
   }
 
   &:hover {
-    height: calc(30rem + 5rem);
+    height: calc($contact-card-height + $hidden-information-height);
   }
 
   &:hover > .hidden-info {
