@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import "./App.css";
+import ContactsList from "./components/contacts-list/contacts-list.component";
+import { Configuration } from "./configuration";
+import { setContactsList } from "./redux/contacts-list/contacts-list.actions";
 
-function App() {
+function App({ setContactsList }) {
+  useEffect(() => {
+    let fetchData = async () => {
+      let contacts = await fetch(Configuration.API_URL).then((res) => {
+        return res.json();
+      });
+
+      setContactsList(contacts);
+    };
+
+    fetchData();
+  }, [setContactsList]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContactsList />
     </div>
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setContactsList: (contacts) => dispatch(setContactsList(contacts)),
+});
+
+export default connect(null, mapDispatchToProps)(App);
