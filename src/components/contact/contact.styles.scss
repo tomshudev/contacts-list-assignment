@@ -1,0 +1,54 @@
+.contact {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+
+  height: 30rem;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  .icon {
+    width: 5rem;
+    height: 5rem;
+
+    margin-top: -2.5rem;
+  }
+
+  .information {
+    margin-top: 1rem;
+
+    .name {
+      font-size: 1.8rem;
+    }
+
+    .job {
+      font-size: 1.3rem;
+    }
+  }
+
+  .hidden-info {
+    display: none;
+    position: absolute;
+    bottom: 2rem;
+
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    height: calc(30rem + 5rem);
+  }
+
+  &:hover > .hidden-info {
+    display: block;
+  }
+}
