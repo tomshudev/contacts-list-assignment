@@ -1,0 +1,17 @@
+.contacts-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .search {
+    padding: 0.5rem;
+    height: 3.5rem;
+    width: 20rem;
+    border: 1px solid #ccc;
+  }
+}
