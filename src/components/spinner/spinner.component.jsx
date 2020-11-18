@@ -12,7 +12,7 @@ function Spinner() {
       >
         <circle
           r="15.9154943092"
-          stroke-width="7"
+          strokeWidth="7"
           fill="none"
           stroke="#424242"
         />
