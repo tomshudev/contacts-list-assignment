@@ -1,4 +1,4 @@
-$contact-card-height: 30rem;
+$contact-card-height: 32rem;
 $hidden-information-height: 5rem;
 $hovered-card-height: $contact-card-height + $hidden-information-height;
 
@@ -41,18 +41,24 @@ $hovered-card-height: $contact-card-height + $hidden-information-height;
   }
 
   .hidden-info {
-    display: none;
+    opacity: 0;
     position: absolute;
-    bottom: 2rem;
+    bottom: 0;
 
     font-size: 1.3rem;
   }
 
-  &:hover {
-    height: $hovered-card-height;
+  // Displaying the hidden information when hovering
+  &:hover > .hidden-info {
+    bottom: 2rem;
+    opacity: 1;
+
+    transition: all 0.2s;
   }
 
-  &:hover > .hidden-info {
-    display: block;
+  // Decrease the height of the image when hovering
+  &:hover > .image {
+    height: 16rem;
+    transition: all 0.1s;
   }
 }
