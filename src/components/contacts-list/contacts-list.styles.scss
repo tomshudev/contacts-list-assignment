@@ -2,6 +2,9 @@
   min-height: 100vh;
   background-color: #eee;
 
+  display: flex;
+  flex-direction: column;
+
   .contacts {
     padding: 3rem;
 
@@ -9,6 +12,13 @@
     grid-template-columns: repeat(auto-fit, 25rem);
     grid-gap: 2rem;
     justify-content: center;
+  }
+
+  .not-found {
+    font-size: 3rem;
+    font-weight: 100;
+
+    margin-top: 5rem;
   }
 
   @media (max-width: 60rem) {
