@@ -19,6 +19,8 @@ $hovered-card-height: $contact-card-height + $hidden-information-height;
     height: 20rem;
     object-fit: cover;
     align-self: center;
+
+    transition: all 0.2s;
   }
 
   .icon {
@@ -46,19 +48,18 @@ $hovered-card-height: $contact-card-height + $hidden-information-height;
     bottom: 0;
 
     font-size: 1.3rem;
+
+    transition: bottom 0.3s, opacity 0.2s;
   }
 
   // Displaying the hidden information when hovering
   &:hover > .hidden-info {
     bottom: 2rem;
     opacity: 1;
-
-    transition: all 0.2s;
   }
 
   // Decrease the height of the image when hovering
   &:hover > .image {
     height: 16rem;
-    transition: all 0.1s;
   }
 }
