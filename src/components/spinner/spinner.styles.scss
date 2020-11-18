@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background: #eee;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  animation: 4s inOut infinite linear, 3s spin infinite linear;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15rem;
+
+  height: 25rem;
+  width: 25rem;
+}
+
+@keyframes inOut {
+  from {
+    stroke-dasharray: 100 0;
+  }
+  25% {
+    stroke-dasharray: 0 100;
+  }
+  to {
+    stroke-dasharray: 100 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    stroke-dashoffset: 75;
+  }
+  to {
+    stroke-dashoffset: 375;
+  }
+}
